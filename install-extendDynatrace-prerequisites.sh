@@ -5,7 +5,7 @@ install_telegraf() {
   if [ "$telegraf" = true ]; then
     printInfoSection "Installing Telegraf pre-requisites"
     printInfo "Download telegraf ..."
-    bashas "wget https://dl.influxdata.com/telegraf/releases/telegraf_1.18.3-1_amd64.deb"
+    bashas "sudo wget https://dl.influxdata.com/telegraf/releases/telegraf_1.18.3-1_amd64.deb"
     bashas "sudo dpkg -i telegraf_1.18.3-1_amd64.deb"
     printInfo "Install snmp deamon ..."
     bashas "sudo apt install snmpd -y"
@@ -17,7 +17,8 @@ install_telegraf() {
     bashas "sudo apt install python3-pip -y"
     printInfo "Installing SNMP Agent ..."
     bashas "sudo apt install python3-distutils -y"
-    bashas "cd /home/ubuntu/extendDynatrace/telegraf"
+    printInfo "cd to SNMP Directory..."
+    bashas "sudo cd /home/ubuntu/extendDynatrace/telegraf"
     bashas "sudo python3 /home/ubuntu/extendDynatrace/telegraf/setup.py.in install"
     printInfo "Copy the MIB files ..."
     bashas "sudo cp /home/ubuntu/extendDynatrace/telegraf/examples/SIMPLE-MIB.txt /usr/share/snmp/mibs/"
