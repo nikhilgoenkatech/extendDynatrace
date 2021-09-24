@@ -94,4 +94,4 @@ stty -echo
 
 # Now start the simple example agent
 echo "* Starting the simple example agent..."
-python simple_agent.py -m tcp:localhost:5558 -p $TMPDIR/
+python3 simple_agent.py -m tcp:localhost:5558 -p $TMPDIR/
