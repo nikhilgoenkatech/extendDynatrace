@@ -18,7 +18,7 @@ install_telegraf() {
     printInfo "Installing SNMP Agent ..."
     bashas "sudo apt install python3-distutils -y"
     printInfo "cd to SNMP Directory..."
-    bashas "sudo cd /home/ubuntu/extendDynatrace/telegraf"
+    bashas "cd /home/ubuntu/extendDynatrace/telegraf"
     bashas "sudo python3 /home/ubuntu/extendDynatrace/telegraf/setup.py.in install"
     printInfo "Copy the MIB files ..."
     bashas "sudo cp /home/ubuntu/extendDynatrace/telegraf/examples/SIMPLE-MIB.txt /usr/share/snmp/mibs/"
