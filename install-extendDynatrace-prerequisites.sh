@@ -140,3 +140,4 @@ installSetup() {
 
   resources_clone
   install_telegraf
+  }
