@@ -111,7 +111,7 @@ setup_proaliases=false
 create_workshop_user=false
 telegraf=false
 
-extendDynatrace() {
+installExtendDynatrace() {
   update_ubuntu=true
   setup_proaliases=true
   clone_the_repo=true
